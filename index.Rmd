@@ -172,5 +172,5 @@ centroamerica_expvida = world[(world$name_long == "Belize" |
                        world$name_long == "Panama") & world$lifeExp >= 74 
 
                                               , ]
- plot(centro_america ["lifeExp"], main="Esperanza de vida de los países de América Central mayor o igual a 74 años")
+ plot(centroamerica_expvida ["lifeExp"], main="Esperanza de vida de los países de América Central mayor o igual a 74 años")
 ```
