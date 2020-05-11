@@ -162,5 +162,15 @@ Con la función ```plot()``` del paquete [sf](https://cran.r-project.org/web/pac
 
 ### Ejercicio 8 (25%)
 Extraiga en un nuevo data frame los países de Centroamérica con esperanza de vida mayor o igual a 74 años y genere el mapa de coropletas, con su título correspondiente.
-```{r}
+```{r} 
+centroamerica_expvida = world[(world$name_long == "Belize" |
+                       world$name_long == "Guatemala" |
+                       world$name_long == "Honduras" |
+                       world$name_long == "El Salvador" |
+                       world$name_long == "Nicaragua" |
+                       world$name_long == "Costa Rica" |
+                       world$name_long == "Panama") & world$lifeExp >= 74 
+
+                                              , ]
+ plot(centro_america ["lifeExp"], main="Esperanza de vida de los países de América Central mayor o igual a 74 años")
 ```
